@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+        {% if object.Image %}
+        <img src="{{obj.Image.url}}" class="card-img-top" alt="...">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{obj.Title}}</h5>
+          <p class="card-text">{{obj.Description}}.</p>
+          <a href="{{obj.pk}}" class="btn btn-primary">View</a>
+        </div>
+</div>

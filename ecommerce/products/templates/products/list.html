@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="my-cards">
+                {% for obj in object_list %}    
+                {% include 'products/snippets/card.html' with object=obj%} 
+                {% endfor %}
+        </div>
+{% endblock%}

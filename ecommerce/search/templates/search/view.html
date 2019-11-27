@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div >
+            {% if request.GET.q %} 
+                <div>
+                        Result For {{request.GET.q}}  
+                </div>    
+            {% else %}
+                {% include 'search/snippets/search.html'%}    
+                <div>
+                          No Result Found
+                </div>
+            {% endif %}   
+        </div>
+        <div class="my-cards">
+                {% for obj in object_list %}    
+                {% include 'products/snippets/card.html' with object=obj%} 
+                {% endfor %}
+        </div>
+{% endblock%}

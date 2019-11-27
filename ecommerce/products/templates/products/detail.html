@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {{object.Title}}<br/>
+    {{object.Description | linebreaks }}<br/>
+    {% if object.image %}
+        <img src="{{object.Image.url}}" />
+
+    {% endif %}
+{% endblock %}
